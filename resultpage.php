@@ -6,7 +6,7 @@ $user_text_length = strlen($user_text);
 //la parola da censurare
 $bad_word = $_GET['badWord'];
 //censuro la bad word dentro user text
-$censored_text = str_replace($bad_word, '****', $user_text);
+$censored_text = str_replace($bad_word, '***', $user_text);
 //ricalcolo la lunghezza di testo input utente
 $censored_text_length = strlen($censored_text);
 ?>
