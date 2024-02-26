@@ -31,13 +31,13 @@ $censored_text_length = strlen($censored_text);
         <h2 class="fw-bold">
           <?php echo $user_text?>
         </h2>
-        <h3>La tua frase è lunga <span class="fw-normal"><?php echo $user_text_length ?></span> caratteri</h3>
+        <h3>La tua frase è lunga <?php echo $user_text_length ?> caratteri</h3>
       </div>
       
       <div class="col-12 mt-5">
         <h3>Questa è la tua frase censurata:</h3>
         <h2 class="fw-bold"><?php echo $censored_text ?></h2>
-        <h3>La tua frase è lunga <span class="fw-normal"><?php echo $censored_text_length ?></span> caratteri</h3>
+        <h3>La tua frase è lunga <?php echo $censored_text_length ?> caratteri</h3>
       </div>
   </div>
 
