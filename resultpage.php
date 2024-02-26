@@ -1,3 +1,16 @@
+<?php
+//testo input utente
+$user_text = $_GET['userText'];
+//lunghezza testo input utente
+$user_text_length = strlen($user_text);
+//la parola da censurare
+$bad_word = $_GET['badWord'];
+//censuro la bad word dentro user text
+$censored_text = str_replace($bad_word, '****', $user_text);
+//ricalcolo la lunghezza di testo input utente
+$censored_text_length = strlen($censored_text);
+?>
+
 <!DOCTYPE html>
 <html lang="it-IT">
 <head>
@@ -14,15 +27,17 @@
   
   <div class="w-50 mx-auto mt-5">
       <div class="col-12">
-        <h2>Questa è la tua frase:</h2>
-        <p class="fw-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo temporibus consequuntur sit voluptatem dolor earum ea maiores eveniet vel, aliquid voluptatum molestias perferendis iusto impedit officiis, fugit sint veritatis necessitatibus.</p>
-        <h3>La tua frase è lunga <span class="fw-normal">tot</span> caratteri</h3>
+        <h3>Questa è la tua frase:</h3>
+        <h2 class="fw-bold">
+          <?php echo $user_text?>
+        </h2>
+        <h3>La tua frase è lunga <span class="fw-normal"><?php echo $user_text_length ?></span> caratteri</h3>
       </div>
       
       <div class="col-12 mt-5">
-        <h2>Questa è la tua frase censurata:</h2>
-        <p class="fw-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo temporibus consequuntur sit voluptatem dolor earum ea maiores eveniet vel, aliquid voluptatum molestias perferendis iusto impedit officiis, fugit sint veritatis necessitatibus.</p>
-        <h3>La tua frase è lunga <span class="fw-normal">tot</span> caratteri</h3>
+        <h3>Questa è la tua frase censurata:</h3>
+        <h2 class="fw-bold"><?php echo $censored_text ?></h2>
+        <h3>La tua frase è lunga <span class="fw-normal"><?php echo $censored_text_length ?></span> caratteri</h3>
       </div>
   </div>
 
